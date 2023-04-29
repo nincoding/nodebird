@@ -2,8 +2,9 @@ import React, { useState, useCallback, useMemo } from "react";
 import { Form, Input, Button } from "antd";
 import Link from "next/link";
 import styled from "styled-components";
+import { symbol } from "prop-types";
 
-const LoginForm = () => {
+const LoginForm = ({ setIsLoggenIn }) => {
 
   const [ id, setId ] = useState("");
   const [ password, setPassword ] = useState("");
@@ -21,8 +22,18 @@ const LoginForm = () => {
   const style = useMemo(() => ({ marginTop: 10 }), []);
   */
 
+  /*
+  리액트에서는 form 태그에 e.preventDefault() 를 많이 하는데 antb에선 하면 안된다.
+  onFinish에 이미 e.preventDefault()가 적용되어 있기 때문이다.
+   */
+
+  const onSubmitForm = useCallback(() => {
+    console.log(id, password);
+    setIsLoggenIn(true);
+  }, [id, password]);
+
   return (
-    <Form>
+    <FormWrapper onFinish={onSubmitForm}>
       <div>
         <label htmlFor="user-id">아이디</label>
         <br/>
@@ -44,7 +55,7 @@ const LoginForm = () => {
           <a><Button>회원가입</Button></a>
         </Link>
       </ButtonWrapper>
-    </Form>
+    </FormWrapper>
   );
 }
 
@@ -52,4 +63,8 @@ export default LoginForm;
 
 const ButtonWrapper = styled.div`
   margin-top: 10px;
+`;
+
+const FormWrapper = styled(Form)`
+  padding: 10px;
 `;

@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useCallback } from "react";
+import { Avatar, Card, Button } from "antd";
 
-const UserProfile = () => {
+const UserProfile = ({ setIsLoggenIn }) => {
+
+  const onLogOut = useCallback(() => {
+    setIsLoggenIn(false);
+  }, []);
+
   return (
-    <div>유저 프로필</div>
+    <Card
+      actions={[
+        <div key="twit">짹짹<br/>0</div>,
+        <div key="followings">팔로잉 수<br/>0</div>,
+        <div key="followers">팔로워 수<br/>0</div>,
+      ]}
+    >
+      <Card.Meta
+        avatar={<Avatar>NIN</Avatar>}
+        title="nincoding" 
+      />
+      <Button
+        onClick={onLogOut}
+      >로그아웃</Button>
+    </Card>
   );
 }
 
