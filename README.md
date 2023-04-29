@@ -51,6 +51,6 @@ npm run build
 
 <br/>
 
-| Next.js | esLint | Ant-Design | styled-components |
+| Next.js | esLint | antd | styled-components |
 | :-----: | :-----: | :-----: | :-----: |
 | <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="50" height="50" />| <img src="https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png" width="50" height="50"/> | <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="50" height="50"/> | <img src="https://styled-components.com/logo.png" width="50" height="50"/> |
