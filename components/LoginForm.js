@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { Form, Input, Button } from "antd";
 import Link from "next/link";
+import styled from "styled-components";
 
 const LoginForm = () => {
 
@@ -14,6 +15,11 @@ const LoginForm = () => {
   const onChangePassword = useCallback((e) => {
     setPassword(e.target.value);
   }, []);
+
+  /*
+  인라인 스타일링시 useMemo로 리렌더링 막기 또는 스타일드 컴포넌트로 만들기
+  const style = useMemo(() => ({ marginTop: 10 }), []);
+  */
 
   return (
     <Form>
@@ -32,14 +38,18 @@ const LoginForm = () => {
           required 
         />
       </div>
-      <div>
+      <ButtonWrapper>
         <Button type="primary" htmlType="submit" loading={false}>로그인</Button>
         <Link href="/signup">
           <a><Button>회원가입</Button></a>
         </Link>
-      </div>
+      </ButtonWrapper>
     </Form>
   );
 }
 
 export default LoginForm;
+
+const ButtonWrapper = styled.div`
+  margin-top: 10px;
+`;
