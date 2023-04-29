@@ -32,6 +32,7 @@ Next.js practice project with Twitter clone
 npm i next@9
 npm i prop-types
 npm i -D eslint eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
+npm i antd styled-components @ant-design/icons
 ```
 
 ## 📌 터미널 명령어
@@ -50,6 +51,6 @@ npm run build
 
 <br/>
 
-| Next.js | esLint | 
-| :-----: | :-----: | 
-| <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="50" height="50" />| <img src="https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png" width="50" height="50"/> | 
+| Next.js | esLint | Ant-Design | styled-components |
+| :-----: | :-----: | :-----: | :-----: |
+| <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="50" height="50" />| <img src="https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png" width="50" height="50"/> | <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="50" height="50"/> | <img src="https://styled-components.com/logo.png" width="50" height="50"/> |
